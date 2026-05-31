@@ -364,3 +364,4 @@ FodyWeavers.xsd
 /MSBuild_Logs
 /GithubNuget.ps1
 /GitHub.txt
+/.MSBuild_Logs
