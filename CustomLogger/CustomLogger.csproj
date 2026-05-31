@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
     <!-- NuGet package metadata -->
     <PackageId>AnotherLogger</PackageId>
-    <Version>1.0.3</Version>
+    <Version>2.0.1</Version>
     <Authors>RickDeschenes</Authors>
     <Company>RickDeschenes</Company>
     <Description>Lightweight file-based logger library.</Description>
