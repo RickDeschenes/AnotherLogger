@@ -361,7 +361,9 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
 # MS_Build - do not check in
-/.MSBuild_Logs/.MSBuild_Logs/MSBuild_CommTrace_PID_34820.txt
-/.MSBuild_Logs/MSBuild_CommTrace_PID_33188.txt
-*.txt
+/MSBuild_Logs
+/.MSBuild_Logs
+/GithubNuget.ps1
+/GitHub.txt

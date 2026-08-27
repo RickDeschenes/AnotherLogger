@@ -11,23 +11,30 @@ public interface ICustomLogger
     /// <summary>
     /// Returns the log message
     /// </summary>
-    string Debug(string message, string? className = null, string? methodName = null);
+    public string Debug(string message, string? className = null, string? methodName = null);
 
     /// <summary>
     /// Returns the log message
     /// </summary>
-    string Info(string message, string? className = null, string? methodName = null);
+    public string Info(string message, string? className = null, string? methodName = null);
 
     /// <summary>
     /// Returns the log message
     /// </summary>
-    string Warning(string message, string? className = null, string? methodName = null);
+    public string Warning(string message, string? className = null, string? methodName = null);
 
     // Keep Exception parameter for Error, append optional class/method context parameters.
     /// <summary>
     /// Returns the log message
     /// </summary>
-    string Error(string message, Exception ex, string? className = null, string? methodName = null);
+    public string Error(string message, Exception ex, string? className = null, string? methodName = null);
+
+    /// <summary>
+    /// Logs an error message without an associated exception. 
+    /// Optional class and method names provide additional context.
+    /// </summary>
+    public string Error(string message, string? className = null, string? methodName = null);
+
 }
 
 public class AnotherLogger(string filePath, LogLevel minLevel) : ICustomLogger
@@ -53,6 +60,13 @@ public class AnotherLogger(string filePath, LogLevel minLevel) : ICustomLogger
     {
         var results = ComposeLog("WARNING", message, className, methodName);
         WriteData(results, LogLevel.Warning);
+        return results;
+    }
+
+    public string Error(string message, string? className = null, string? methodName = null)
+    {
+        var results = ComposeLog("ERROR", message, className, methodName);
+        WriteData(results, LogLevel.Error);
         return results;
     }
 
