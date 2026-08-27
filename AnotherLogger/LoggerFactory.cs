@@ -1,4 +1,4 @@
-namespace CustomLogger;
+namespace AnotherLogger;
 
 public static class LoggerFactory
 {
@@ -14,7 +14,7 @@ public static class LoggerFactory
         }
 
         var filename = GenerateFileName(filePath, fileName);
-        return new CustomLogger(filename, minLevel);
+        return new AnotherLogger(filename, minLevel);
     }
 
     private static string GenerateFileName(string filePath, string fileName)

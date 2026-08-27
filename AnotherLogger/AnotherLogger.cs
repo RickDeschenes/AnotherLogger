@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace CustomLogger;
+namespace AnotherLogger;
 
 /// <summary>
 /// Logger that returns the log entry to the method
@@ -30,7 +30,7 @@ public interface ICustomLogger
     string Error(string message, Exception ex, string? className = null, string? methodName = null);
 }
 
-public class CustomLogger(string filePath, LogLevel minLevel) : ICustomLogger
+public class AnotherLogger(string filePath, LogLevel minLevel) : ICustomLogger
 {
     private readonly string _filePath = filePath;
     private readonly LogLevel _minLevel = minLevel;
