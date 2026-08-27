@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+	<!-- Disable MSBuild binary logging -->
+	<ProduceOnlyReferenceAssembly>false</ProduceOnlyReferenceAssembly>
+	<DisableMSBuildAssemblySearchPathResolution>true</DisableMSBuildAssemblySearchPathResolution>
+  </PropertyGroup>
+</Project>

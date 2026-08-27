@@ -18,9 +18,9 @@
 
 		<PackageTags>logging;logger;file-logger</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<RepositoryUrl>https://github.com/RickDeschenes/CustomLogger</RepositoryUrl>
+		<RepositoryUrl>https://github.com/RickDeschenes/AnotherLogger</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
-		<PackageProjectUrl>https://github.com/RickDeschenes/CustomLogger</PackageProjectUrl>
+		<PackageProjectUrl>https://github.com/RickDeschenes/AnotherLogger</PackageProjectUrl>
 
 		<!-- Ensure packages are emitted into project-root artifacts folder -->
 		<PackageOutputPath>$(MSBuildProjectDirectory)/artifacts</PackageOutputPath>
