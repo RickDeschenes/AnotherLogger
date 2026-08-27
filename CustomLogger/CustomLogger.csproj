@@ -7,7 +7,7 @@
 
     <!-- NuGet package metadata -->
     <PackageId>AnotherLogger</PackageId>
-    <Version>2.0.2</Version>
+    <Version>2.0.3</Version>
     <Authors>RickDeschenes</Authors>
     <Company>RickDeschenes</Company>
     <Description>Lightweight file-based logger library.</Description>

@@ -1,0 +1,31 @@
+# Build & Package Cheat Sheet — AnotherLogger / CustomLogger
+# ----------------------------------------------------------
+# Use Developer PowerShell 7 inside Visual Studio
+
+# 1️⃣ Clean the solution
+dotnet clean
+
+# 2️⃣ Build in Release mode
+dotnet build -c Release
+
+# 3️⃣ Pack the project into a NuGet package
+#    - Update the version number each time
+#    - Output goes to the artifacts folder
+dotnet pack .\AnotherLogger.csproj -c Release /p:PackageVersion=2.0.X /p:PackageOutputPath=artifacts
+
+# 4️⃣ Verify the package exists
+Get-ChildItem .\artifacts
+
+# 5️⃣ Push to GitHub Packages
+#    Replace ghp_XXXX with your actual token
+dotnet nuget push .\artifacts\AnotherLogger.2.0.X.nupkg --api-key ghp_XXXX --source "https://nuget.pkg.github.com/rickdeschenes/index.json"
+
+# 6️⃣ Update dependent projects
+#    Edit the .csproj file to reference the new version:
+#    <PackageReference Include="AnotherLogger" Version="2.0.X" />
+
+# 7️⃣ Restore and rebuild dependent projects
+dotnet restore
+dotnet build
+
+# ✅ Done — the new package is now available in GitHub Packages and NuGet Manager.
